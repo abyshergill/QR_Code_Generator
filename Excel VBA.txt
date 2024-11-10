@@ -1,0 +1,75 @@
+Sub InsertAndResizePictures()
+    Dim ws As Worksheet
+    Dim pic As Picture
+    Dim folderPath As String
+    Dim fileName As String
+    Dim imgCount As Long
+    Dim rowNum As Long
+    Dim colNum As Long
+    Dim imgWidth As Double
+    Dim imgHeight As Double
+    Dim cell As Range
+    
+    ' Set folder path
+    folderPath = ThisWorkbook.Path & "\"
+    fileName = Dir(folderPath & "*.*")
+    
+    ' Initialize counters
+    imgCount = 0
+    rowNum = 1
+    colNum = 1
+    
+    ' Create the first sheet
+    Set ws = ThisWorkbook.Sheets(1)
+    
+    ' Loop through all files in the folder
+    Do While fileName <> ""
+        ' Check if the file is an image
+        If LCase(Right(fileName, 4)) = ".jpg" Or _
+           LCase(Right(fileName, 4)) = ".png" Or _
+           LCase(Right(fileName, 4)) = ".bmp" Or _
+           LCase(Right(fileName, 4)) = ".gif" Then
+            
+            ' Insert picture
+            Set pic = ws.Pictures.Insert(folderPath & fileName)
+            
+            ' Resize the picture (optional size)
+            imgWidth = 100 ' Adjust width as needed
+            imgHeight = 100 ' Adjust height as needed
+            pic.Width = imgWidth
+            pic.Height = imgHeight
+            
+            ' Position the picture in the cell
+            Set cell = ws.Cells(rowNum, colNum)
+            pic.Top = cell.Top
+            pic.Left = cell.Left
+            
+            ' Resize the cell to fit the image
+            cell.RowHeight = imgHeight
+            cell.ColumnWidth = imgWidth / 7.5 ' Adjust based on pixel to column width ratio
+            
+            ' Increment counters
+            imgCount = imgCount + 1
+            colNum = colNum + 1
+            
+            ' Move to the next row after 4 columns
+            If colNum > 4 Then
+                colNum = 1
+                rowNum = rowNum + 1
+            End If
+            
+            ' Create a new sheet after 12 pictures
+            If imgCount Mod 12 = 0 Then
+                Set ws = ThisWorkbook.Sheets.Add
+                rowNum = 1
+                colNum = 1
+            End If
+        End If
+        
+        ' Get next file
+        fileName = Dir
+    Loop
+    
+    MsgBox "Pictures inserted and resized successfully!"
+End Sub
+
