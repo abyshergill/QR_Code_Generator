@@ -1,5 +1,4 @@
-('C:\\Users\\LC270900\\Desktop\\Machine Learning\\Project\\Project QR '
- 'code\\Git_Record\\build\\Final\\PYZ-00.pyz',
+('C:\\Users\\LC270900\\Desktop\\dist\\a\\QR_Code_Generator\\build\\Final\\PYZ-00.pyz',
  [('PIL',
    'C:\\Users\\LC270900\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\PIL\\__init__.py',
    'PYMODULE'),
