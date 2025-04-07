@@ -1,6 +1,7 @@
 # <u><font color="Green">QR code Engine </font></u>
 # <u>USER INSTRUCTION MANUAL </u>
 
+![Main Window Image](images/main_window.png)
 <img src="images/main_window.png">
 <Br>
 
