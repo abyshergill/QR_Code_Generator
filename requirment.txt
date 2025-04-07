@@ -1,0 +1,5 @@
+qrcode version: 8.0
+Pillow version: 10.4.0
+tkinter version: 8.6
+Python version: 3.11.2
+customtkinter
