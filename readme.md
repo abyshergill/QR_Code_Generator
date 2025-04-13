@@ -1,8 +1,7 @@
 # <u><font color="Green">QR code Engine </font></u>
 # <u>USER INSTRUCTION MANUAL </u>
 
-![Main Window Image](images/main_window.png)
-<img src="images\main_window.png">
+![Main Window Image](images/main_window.jpg)
 <Br>
 
 **QR Code Generator**
@@ -67,15 +66,15 @@ This is explaination this with example.<br>
 **NOTE:**
 * Double click on ENTER QR CODE textbox new window will 
 where also can pass the QR code information.
-<img src="images/subwindow.png">
+<img src="images/subwindow.jpg">
 <hr>
 
 ### Optional :
 You can use Excel VBA script to put all the QR code in one excel file so you can print.<br><br>
 **How to use VBA file**
 * Step 1: First places VBA file where all QR code images save.
-<img src="images/filelocation.png">
+<img src="images/filelocation.jpg">
 * Step 2: Open the VBA.xlsm file, Make sure you enable VBA.
-<img src="images/VBA.png">
+<img src="images/VBA.jpg">
 * Step 3: After click the <strong>Click me</strong>result will be like in the picture below which you can print.
-<img src="images/after_click_me.png">
+<img src="images/after_click_me.jpg">
